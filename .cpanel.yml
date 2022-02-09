@@ -1,0 +1,5 @@
+---
+deployment:
+tasks:
+- export DEPLOYPATH=/home/gurindam/repo/gurindamv2/git
+- /bin/cp -r * $DEPLOYPATH
