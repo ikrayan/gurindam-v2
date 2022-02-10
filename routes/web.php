@@ -20,3 +20,7 @@ Route::get('/', function () {
 Route::get('/halo', function () {
     return "Hello World";
 });
+
+Route::get('/page/{id}', function ($id) {
+    return "Selamat kamu mengakses halaman ".$id." !";
+});
