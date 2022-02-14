@@ -14,13 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    return view('onepage');
+});
+
+Route::get('/dashboard', function () {
     return view('welcome');
-});
-
-Route::get('/halo', function () {
-    return "Hello World";
-});
-
-Route::get('/page/{id}', function ($id) {
-    return "Selamat kamu mengakses halaman ".$id." !";
 });
