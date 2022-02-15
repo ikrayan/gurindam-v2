@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,9 +15,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('onepage');
+    return view('welcome');
+});
+
+Route::get('/consult', function () {
+    return view('onePage/mConsult');
 });
 
 Route::get('/dashboard', function () {
-    return view('welcome');
+    return view('mDashboard');
+});
+
+Route::get('/clear-cache', function () {
+    Artisan::call('cache:clear');
+    return "Cache is cleared";
 });

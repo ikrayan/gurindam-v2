@@ -724,11 +724,11 @@ p {
 
 /*===== HEADER HERO =====*/
 .header-hero {
-  height: 800px;
+  height: 750px;
   position: relative; }
   @media only screen and (min-width: 1400px) {
     .header-hero {
-      height: 990px; } }
+      height: 750px; } }
   @media only screen and (min-width: 768px) and (max-width: 991px) {
     .header-hero {
       height: auto; } }
