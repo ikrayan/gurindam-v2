@@ -26,6 +26,8 @@ Route::get('/dashboard', function () {
     return view('mDashboard');
 });
 
+Route::get('/login', 'LoginController@index');
+
 Route::get('/clear-cache', function () {
     Artisan::call('cache:clear');
     return "Cache is cleared";

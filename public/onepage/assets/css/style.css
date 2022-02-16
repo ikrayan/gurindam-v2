@@ -717,8 +717,8 @@ p {
     transform: translateY(-50%); } }
 @media (max-width: 767px) {
   .navbar-btn .main-btn {
-    height: 40px;
-    line-height: 36px;
+    height: 30px;
+    line-height: 30px;
     font-size: 13px;
     padding: 0 20px; } }
 
