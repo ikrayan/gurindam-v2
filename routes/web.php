@@ -1,7 +1,9 @@
 <?php
 
-use Illuminate\Support\Facades\Artisan;
+use App\Models\Post;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Artisan;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -15,8 +17,29 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome', [
+        "posts" => Post::all()
+    ]);
 });
+
+Route::get('/postsss', function () {
+    return view('onePage/post');
+});
+
+Route::get('/post/{slug}', function ($slug) {
+    $new_post = [];
+    $posts = Post::all();
+
+    foreach ($posts as $post) {
+        if ($post["slug"] === $slug)
+            $new_post = $post;
+    }
+
+    return view('onePage/post', [
+        "post" => $new_post
+    ]);
+});
+
 
 Route::get('/consult', function () {
     return view('onePage/mConsult');
