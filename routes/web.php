@@ -22,8 +22,8 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/postsss', function () {
-    return view('onePage/post');
+Route::get('/postss', function () {
+    return view('onePage/navbar');
 });
 
 Route::get('/post/{slug}', function ($slug) {
