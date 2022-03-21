@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PostController;
 use App\Models\Post;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Artisan;
@@ -16,30 +17,13 @@ use Illuminate\Support\Facades\Artisan;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome', [
-        "posts" => Post::all()
-    ]);
-});
+Route::get('/', [PostController::class, 'index']);
+
+Route::get('/post/{slug}', [PostController::class, 'show']);
 
 Route::get('/postss', function () {
     return view('onePage/navbar');
 });
-
-Route::get('/post/{slug}', function ($slug) {
-    $new_post = [];
-    $posts = Post::all();
-
-    foreach ($posts as $post) {
-        if ($post["slug"] === $slug)
-            $new_post = $post;
-    }
-
-    return view('onePage/post', [
-        "post" => $new_post
-    ]);
-});
-
 
 Route::get('/consult', function () {
     return view('onePage/mConsult');

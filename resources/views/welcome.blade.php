@@ -1,7 +1,7 @@
 @extends('onePage.body')
 
 @section('konten')
-    <section id="content" class="our-services-area pt-60 border-top">
+    <section id="content" class="our-services-area pt-60 pb-70">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
@@ -14,7 +14,7 @@
 
             {{-- scroll konten nyamping --}}
             <div class="row justify-content-center">
-                <div class="col-lg-10">
+                <div class="col-lg-12">
                     <div class="our-services-tab pt-30">
                         <ul class="nav justify-content-center wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s"
                             id="myTab" role="tablist">
@@ -53,7 +53,7 @@
                                             <div class="single-blog mt-30 wow fadeInUpBig p-3 border-left border-bottom"
                                                 data-wow-duration="1s" data-wow-delay="0.4s">
                                                 <div class="blog-image">
-                                                    <a href="blog-details.html"><img
+                                                    <a href="/post/{{ $post['slug'] }}"><img
                                                             src="https://picsum.photos/200?random={{ $post['no'] }}"
                                                             alt="knowledge"></a>
                                                 </div>

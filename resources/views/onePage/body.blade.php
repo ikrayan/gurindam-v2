@@ -98,24 +98,30 @@
                                         <a href="#home">Home</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="#about">About </a>
-                                    </li>
-                                    <li class="nav-item">
                                         <a href="#content">Content</a>
                                     </li>
-                                    <li class="nav-item">
+                                    {{-- <li class="nav-item">
                                         <a href="#portfolio">Portfolio</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="#blog">Blog</a>
-                                    </li>
+                                    </li> --}}
                                     <li class="nav-item">
-                                        <a href="#contact">Contact</a>
+                                        <a href="#about">About </a>
                                     </li>
+                                    <li class="nav-item d-lg-none">
+                                        <div class="dropdown-divider"></div>
+                                    </li>
+                                    <li class="nav-item d-lg-none">
+                                        <a href="/dashboard"><i class="lni lni-arrow-right mr-1"></i>Login </a>
+                                    </li>
+                                    {{-- <li class="nav-item">
+                                        <a href="#contact">Contact</a>
+                                    </li> --}}
                                 </ul>
                             </div> <!-- navbar collapse -->
 
-                            <div class="navbar-btn d-sm-inline-block">
+                            <div class="navbar-btn d-none d-lg-block">
                                 <a class="main-btn" href="/dashboard">Login</a>
                             </div>
                         </nav> <!-- navbar -->
@@ -157,8 +163,10 @@
         {{-- end section home --}}
     </header>
 
+    @yield('konten')
+
     {{-- section about --}}
-    <section id="about" class="about-area pt-100">
+    <section id="about" class="about-area pt-70 border-top">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-9">
@@ -297,8 +305,6 @@
     </section>
     {{-- end section about --}}
 
-    @yield('konten')
-
     <!--====== FOOTER PART START ======-->
 
     <footer id="footer" class="footer-area bg_cover border-top mt-100"
@@ -310,7 +316,7 @@
                         <div class="footer-about pt-40">
                             <a href="#">
                                 <div class="row">
-                                    <div class="d-flex align-items-end">
+                                    <div class="d-flex align-items-end ml-3">
                                         <img src="{{ asset('onepage/assets/images/logo-gurindam-sm.png') }}"
                                             alt="Logo">
                                         <h5 class="ml-1 text-black-50">GURINDAM</h5>
@@ -357,7 +363,7 @@
                             <div class="contact pt-10">
                                 <p class="text">Jalan Hangtuang Ujung No. 148, Kota Pekanbaru</p>
                                 <p class="text">kanreg12@gmail.com</p>
-                                <p class="text">+99 000 555 66 22</p>
+                                <p class="text">0761-</p>
 
                                 <ul class="social mt-40">
                                     <li><a href="#"><i class="lni-facebook"></i></a></li>
